@@ -13,4 +13,9 @@ Introduction to proj structure
 
 How to use it?
 =============
+I STRONGLY RECOMMEND you to use WSVideoPlayer included in folder VideoSDK/WSVideoPlayer_AV and MUST refrence DEMO in folder Demos_/AV.   
 
+Contact
+=============
+Any problem in using pls let me know that.   
+My email is nnnwjs@126.com
