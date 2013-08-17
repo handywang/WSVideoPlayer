@@ -17,5 +17,5 @@ I STRONGLY RECOMMEND you to use WSVideoPlayer included in folder VideoSDK/WSVide
 
 Contact
 =============
-Any problem in using pls let me know that.   
-My email is nnnwjs@126.com
+If you have any quetions or issues about this plugin please let me know that.      
+my email is: nnnwjs@126.com
