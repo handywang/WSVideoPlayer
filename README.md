@@ -9,7 +9,7 @@ PLS ENJOY IT!
 Introduction to proj structure
 =============
 -WSRootViewController&WSRootTableViewController are the demo list which includes HTML5 <video> and WSVideoPlayerDemos(Developed with MPMoviePlayerViewController and AVFoundation).   
-Demos_ folder 
+-Demos_ folder: There are 3 folds(WV/MV/AV), they are the dome implementations and corresonds to HTML5 <video>, MPMoviePlayerViewController, AVFoundation.    
 
 How to use it?
 =============
