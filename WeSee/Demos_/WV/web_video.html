@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+            <script>
+                function renderVideo(videoHTML) {
+                    try {
+                        var _videoContainer = document.getElementById("videoContainer");
+                        _videoContainer.innerHTML = videoHTML;
+                    } catch(e) {
+                        alert(e);
+                    }
+                };
+                
+                function renderVideoSourceCode(videoSourceCode) {
+                    try {
+                        var _videoSourceCodeContainer = document.getElementById("videoSourceCodeContainer");
+                        _videoSourceCodeContainer.innerHTML = videoSourceCode;
+                    } catch(e) {
+                        alert(e);
+                    }
+                };
+            </script>
+    </head>
+    <body style="background-color:black;">
+        <div id="videoContainer"></div>
+        <xmp id="videoSourceCodeContainer" style="color:white; font-size:20px;"></xmp>
+    </body>
+</html>
