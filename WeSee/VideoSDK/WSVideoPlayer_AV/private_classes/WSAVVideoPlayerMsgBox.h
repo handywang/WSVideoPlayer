@@ -1,5 +1,5 @@
 //
-//  WSVideoPlayerMsgBox.h
+//  WSAVVideoPlayerMsgBox.h
 //  WeSee
 //
 //  Created by handy wang on 7/25/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WSVideoPlayerMsgBox : UILabel
+@interface WSAVVideoPlayerMsgBox : UILabel
 - (void)pushMsg:(NSString *)msg;
 @end

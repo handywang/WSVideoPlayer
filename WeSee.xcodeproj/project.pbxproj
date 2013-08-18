@@ -13,7 +13,7 @@
 		33B4ACA217C1094B003D7E2D /* WSVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B4AC9F17C1094B003D7E2D /* WSVideoModel.m */; };
 		33B4ACB017C10983003D7E2D /* WSProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B4ACA517C10983003D7E2D /* WSProgressBar.m */; };
 		33B4ACB117C10983003D7E2D /* WSProgressSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B4ACA717C10983003D7E2D /* WSProgressSlider.m */; };
-		33B4ACB217C10983003D7E2D /* WSVideoPlayerMsgBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B4ACA917C10983003D7E2D /* WSVideoPlayerMsgBox.m */; };
+		33B4ACB217C10983003D7E2D /* WSAVVideoPlayerMsgBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B4ACA917C10983003D7E2D /* WSAVVideoPlayerMsgBox.m */; };
 		33B4ACB317C10983003D7E2D /* WSAVVideoPlayerToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B4ACAB17C10983003D7E2D /* WSAVVideoPlayerToolBar.m */; };
 		33B4ACB417C10983003D7E2D /* WSAVVideoPlaylistView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B4ACAD17C10983003D7E2D /* WSAVVideoPlaylistView.m */; };
 		33B4ACB517C10983003D7E2D /* WSVideoVolumeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B4ACAF17C10983003D7E2D /* WSVideoVolumeButton.m */; };
@@ -151,8 +151,8 @@
 		33B4ACA517C10983003D7E2D /* WSProgressBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSProgressBar.m; sourceTree = "<group>"; };
 		33B4ACA617C10983003D7E2D /* WSProgressSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSProgressSlider.h; sourceTree = "<group>"; };
 		33B4ACA717C10983003D7E2D /* WSProgressSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSProgressSlider.m; sourceTree = "<group>"; };
-		33B4ACA817C10983003D7E2D /* WSVideoPlayerMsgBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSVideoPlayerMsgBox.h; sourceTree = "<group>"; };
-		33B4ACA917C10983003D7E2D /* WSVideoPlayerMsgBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSVideoPlayerMsgBox.m; sourceTree = "<group>"; };
+		33B4ACA817C10983003D7E2D /* WSAVVideoPlayerMsgBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSAVVideoPlayerMsgBox.h; sourceTree = "<group>"; };
+		33B4ACA917C10983003D7E2D /* WSAVVideoPlayerMsgBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSAVVideoPlayerMsgBox.m; sourceTree = "<group>"; };
 		33B4ACAA17C10983003D7E2D /* WSAVVideoPlayerToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSAVVideoPlayerToolBar.h; sourceTree = "<group>"; };
 		33B4ACAB17C10983003D7E2D /* WSAVVideoPlayerToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSAVVideoPlayerToolBar.m; sourceTree = "<group>"; };
 		33B4ACAC17C10983003D7E2D /* WSAVVideoPlaylistView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSAVVideoPlaylistView.h; sourceTree = "<group>"; };
@@ -338,8 +338,8 @@
 				33B4ACAD17C10983003D7E2D /* WSAVVideoPlaylistView.m */,
 				33B4ACAA17C10983003D7E2D /* WSAVVideoPlayerToolBar.h */,
 				33B4ACAB17C10983003D7E2D /* WSAVVideoPlayerToolBar.m */,
-				33B4ACA817C10983003D7E2D /* WSVideoPlayerMsgBox.h */,
-				33B4ACA917C10983003D7E2D /* WSVideoPlayerMsgBox.m */,
+				33B4ACA817C10983003D7E2D /* WSAVVideoPlayerMsgBox.h */,
+				33B4ACA917C10983003D7E2D /* WSAVVideoPlayerMsgBox.m */,
 				33B4ACA417C10983003D7E2D /* WSProgressBar.h */,
 				33B4ACA517C10983003D7E2D /* WSProgressBar.m */,
 				33B4ACA617C10983003D7E2D /* WSProgressSlider.h */,
@@ -806,7 +806,7 @@
 				33B4ACA217C1094B003D7E2D /* WSVideoModel.m in Sources */,
 				33B4ACB017C10983003D7E2D /* WSProgressBar.m in Sources */,
 				33B4ACB117C10983003D7E2D /* WSProgressSlider.m in Sources */,
-				33B4ACB217C10983003D7E2D /* WSVideoPlayerMsgBox.m in Sources */,
+				33B4ACB217C10983003D7E2D /* WSAVVideoPlayerMsgBox.m in Sources */,
 				33B4ACB317C10983003D7E2D /* WSAVVideoPlayerToolBar.m in Sources */,
 				33B4ACB417C10983003D7E2D /* WSAVVideoPlaylistView.m in Sources */,
 				33B4ACB517C10983003D7E2D /* WSVideoVolumeButton.m in Sources */,

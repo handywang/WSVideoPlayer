@@ -1,21 +1,21 @@
 //
-//  WSVideoPlayerMsgBox.m
+//  WSAVVideoPlayerMsgBox.m
 //  WeSee
 //
 //  Created by handy wang on 7/25/13.
 //  Copyright (c) 2013 handy. All rights reserved.
 //
 
-#import "WSVideoPlayerMsgBox.h"
+#import "WSAVVideoPlayerMsgBox.h"
 #import "UIViewAdditions.h"
 #import "WSUtility.h"
 
-@interface WSVideoPlayerMsgBox() {
+@interface WSAVVideoPlayerMsgBox() {
     BOOL _finishedToShowMsg;
 }
 @end
 
-@implementation WSVideoPlayerMsgBox
+@implementation WSAVVideoPlayerMsgBox
 
 - (id)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {

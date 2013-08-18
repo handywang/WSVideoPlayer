@@ -14,7 +14,7 @@
 #import <CoreMedia/CoreMedia.h>
 
 #import "WSConst.h"
-#import "WSVideoPlayerMsgBox.h"
+#import "WSAVVideoPlayerMsgBox.h"
 #import "WSAVVideoPlayerToolBar.h"
 #import "WSLoadingView.h"
 
@@ -37,7 +37,7 @@ static void *SNPlayerViewPlayerRateObservationContext = &SNPlayerViewPlayerRateO
 @interface WSAVVideoPlayer()
 @property(nonatomic, retain)WSLoadingView           *loadingView;
 @property(nonatomic, retain)AVQueuePlayer           *player;
-@property(nonatomic, retain)WSVideoPlayerMsgBox     *msgBox;
+@property(nonatomic, retain)WSAVVideoPlayerMsgBox     *msgBox;
 @property(nonatomic, retain)UIImageView             *poster;
 @property(nonatomic, retain)WSAVVideoPlayerToolBar    *toolBar;
 @property(nonatomic, assign)BOOL                    isFinishedToShowOrHideToolBar;
@@ -63,7 +63,7 @@ static void *SNPlayerViewPlayerRateObservationContext = &SNPlayerViewPlayerRateO
         self.playerItemArray    = [NSMutableArray array];
                 
         CGRect _msgBoxFrame = CGRectMake(-kMsgBoxWidth, (self.height-kMsgBoxHeight)/2.0f, kMsgBoxWidth, kMsgBoxHeight);
-        self.msgBox = [[[WSVideoPlayerMsgBox alloc] initWithFrame:_msgBoxFrame] autorelease];
+        self.msgBox = [[[WSAVVideoPlayerMsgBox alloc] initWithFrame:_msgBoxFrame] autorelease];
         self.msgBox.autoresizingMask = UIViewAutoresizingFlexibleRightMargin;
         [self addSubview:self.msgBox];
         
