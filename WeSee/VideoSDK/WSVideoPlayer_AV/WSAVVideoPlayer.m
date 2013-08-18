@@ -1,12 +1,12 @@
 //
-//  WSVideoPlayer.m
+//  WSAVVideoPlayer.m
 //  WeSee
 //
 //  Created by handy on 7/24/13.
 //  Copyright (c) 2013 handy. All rights reserved.
 //
 
-#import "WSVideoPlayer.h"
+#import "WSAVVideoPlayer.h"
 
 #import "UIViewAdditions.h"
 #import <AVFoundation/AVFoundation.h>
@@ -34,7 +34,7 @@ static void *SNPlayerViewPlaterItemDurationObservationContext= &SNPlayerViewPlat
 static void *SNPlayerViewPlayerCurrentItemObservationContext =&SNPlayerViewPlayerCurrentItemObservationContext;
 static void *SNPlayerViewPlayerRateObservationContext = &SNPlayerViewPlayerRateObservationContext;
 
-@interface WSVideoPlayer()
+@interface WSAVVideoPlayer()
 @property(nonatomic, retain)WSLoadingView           *loadingView;
 @property(nonatomic, retain)AVQueuePlayer           *player;
 @property(nonatomic, retain)WSVideoPlayerMsgBox     *msgBox;
@@ -52,7 +52,7 @@ static void *SNPlayerViewPlayerRateObservationContext = &SNPlayerViewPlayerRateO
 @property(nonatomic, assign)CGFloat                 rateBeforeTappingProgressBar;
 @end
 
-@implementation WSVideoPlayer
+@implementation WSAVVideoPlayer
 
 #pragma mark - Lifecycle
 - (id)initWithFrame:(CGRect)frame {
@@ -181,7 +181,7 @@ static void *SNPlayerViewPlayerRateObservationContext = &SNPlayerViewPlayerRateO
 
 #pragma mark - UIGestureRecognizerDelegate
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
-    return [touch.view isKindOfClass:[WSVideoPlayer class]];
+    return [touch.view isKindOfClass:[WSAVVideoPlayer class]];
 }
 
 #pragma mark - WSVideoPlayerToolBarDelegate

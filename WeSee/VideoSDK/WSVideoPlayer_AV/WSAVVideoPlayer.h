@@ -1,5 +1,5 @@
 //
-//  WSVideoPlayer.h
+//  WSAVVideoPlayer.h
 //  WeSee
 //
 //  Created by handy on 7/24/13.
@@ -11,7 +11,7 @@
 #import "WSVideoPlayerToolBar.h"
 #import "WSVideoPlaylistView.h"
 
-@interface WSVideoPlayer : UIView<WSVideoPlayerToolBarDelegate, UIGestureRecognizerDelegate, WSVideoPlaylistViewDelegate>
+@interface WSAVVideoPlayer : UIView<WSVideoPlayerToolBarDelegate, UIGestureRecognizerDelegate, WSVideoPlaylistViewDelegate>
 @property(nonatomic, retain)NSMutableArray *videoModels;
 @property(nonatomic, assign)id delegate;
 

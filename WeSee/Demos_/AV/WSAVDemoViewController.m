@@ -7,12 +7,12 @@
 //
 
 #import "WSAVDemoViewController.h"
-#import "WSVideoPlayer.h"
+#import "WSAVVideoPlayer.h"
 #import "JSONKit.h"
 #import "UIViewAdditions.h"
 
 @interface WSAVDemoViewController ()
-@property (nonatomic, retain)WSVideoPlayer *videoPlayer;
+@property (nonatomic, retain)WSAVVideoPlayer *videoPlayer;
 @end
 
 @implementation WSAVDemoViewController
@@ -82,7 +82,7 @@
     [self.videoPlayer stop];
     self.videoPlayer.delegate = nil;
     self.videoPlayer = nil;
-    _videoPlayer = [[WSVideoPlayer alloc] initWithFrame:CGRectMake(0, 0, self.view.width, self.view.height)];
+    _videoPlayer = [[WSAVVideoPlayer alloc] initWithFrame:CGRectMake(0, 0, self.view.width, self.view.height)];
     _videoPlayer.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleBottomMargin;
     [_videoPlayer setVideoModels:_videoModels];
     [self.view addSubview:_videoPlayer];
