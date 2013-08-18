@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "WSProgressSlider.h"
+#import "WSAVProgressSlider.h"
 
 @interface WSAVProgressBar : UIView
 @property (nonatomic, assign)id delegate;
-@property (nonatomic, retain)WSProgressSlider *progressSlider;
+@property (nonatomic, retain)WSAVProgressSlider *progressSlider;
 
 - (void)initTimeLabelTextToNonLive;
 - (void)initTimeLabelTextToLive;

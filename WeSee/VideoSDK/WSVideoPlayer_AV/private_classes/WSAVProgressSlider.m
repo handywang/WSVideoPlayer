@@ -1,14 +1,14 @@
 //
-//  WSProgressSlider.m
+//  WSAVProgressSlider.m
 //  WeSee
 //
 //  Created by handy on 8/3/13.
 //  Copyright (c) 2013 handy. All rights reserved.
 //
 
-#import "WSProgressSlider.h"
+#import "WSAVProgressSlider.h"
 
-@implementation WSProgressSlider
+@implementation WSAVProgressSlider
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];

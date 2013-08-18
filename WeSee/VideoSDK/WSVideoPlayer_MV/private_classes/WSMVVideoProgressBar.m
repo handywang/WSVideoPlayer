@@ -115,7 +115,7 @@
     return _humanReadableTime;
 }
 
-#pragma mark - WSProgressSliderDelegate
+#pragma mark - WSAVProgressSliderDelegate
 - (void)didTouchDown:(WSMVProgressSlider *)progressSlider {
     if ([_delegate respondsToSelector:@selector(didTouchDown:)]) {
         [_delegate didTouchDown:progressSlider];

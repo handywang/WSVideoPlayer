@@ -215,8 +215,8 @@ static void *SNPlayerViewPlayerRateObservationContext = &SNPlayerViewPlayerRateO
     }
 }
 
-#pragma mark - WSProgressSliderDelegate
-- (void)didTouchDown:(WSProgressSlider *)progressSlider {
+#pragma mark - WSAVProgressSliderDelegate
+- (void)didTouchDown:(WSAVProgressSlider *)progressSlider {
     //---如果是直播就直接返回
     CMTime playerDuration = [self playerItemDuration];
     if (CMTIME_IS_INVALID(playerDuration)) {
@@ -234,10 +234,10 @@ static void *SNPlayerViewPlayerRateObservationContext = &SNPlayerViewPlayerRateO
     [self removePlayerTimeObserver];
 }
 
-- (void)didTouchMove:(WSProgressSlider *)progressSlider {
+- (void)didTouchMove:(WSAVProgressSlider *)progressSlider {
 }
 
-- (void)didTouchUp:(WSProgressSlider *)progressSlider {
+- (void)didTouchUp:(WSAVProgressSlider *)progressSlider {
     //---
     CMTime playerDuration = [self playerItemDuration];
     if (CMTIME_IS_INVALID(playerDuration)) {
@@ -266,7 +266,7 @@ static void *SNPlayerViewPlayerRateObservationContext = &SNPlayerViewPlayerRateO
     }
 }
 
-- (void)didTouchCancel:(WSProgressSlider *)progressSlider {
+- (void)didTouchCancel:(WSAVProgressSlider *)progressSlider {
 }
 
 #pragma mark - KVO

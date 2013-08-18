@@ -44,7 +44,7 @@
         _leftTimeLabel.textColor = [UIColor whiteColor];
         [self addSubview:_leftTimeLabel];
         
-        _progressSlider = [[WSProgressSlider alloc] initWithFrame:CGRectMake(CGRectGetMaxX(_passedTimeLabel.frame),
+        _progressSlider = [[WSAVProgressSlider alloc] initWithFrame:CGRectMake(CGRectGetMaxX(_passedTimeLabel.frame),
                                                                   0,
                                                                   self.width-2*kProgressTimeLabelWidth,
                                                                   CGRectGetHeight(self.frame))];
@@ -125,26 +125,26 @@ NSLocale* WSCurrentLocale() {
     }
 }
 
-#pragma mark - WSProgressSliderDelegate
-- (void)didTouchDown:(WSProgressSlider *)progressSlider {
+#pragma mark - WSAVProgressSliderDelegate
+- (void)didTouchDown:(WSAVProgressSlider *)progressSlider {
     if ([_delegate respondsToSelector:@selector(didTouchDown:)]) {
         [_delegate didTouchDown:progressSlider];
     }
 }
 
-- (void)didTouchMove:(WSProgressSlider *)progressSlider {
+- (void)didTouchMove:(WSAVProgressSlider *)progressSlider {
     if ([_delegate respondsToSelector:@selector(didTouchMove:)]) {
         [_delegate didTouchMove:progressSlider];
     }
 }
 
-- (void)didTouchUp:(WSProgressSlider *)progressSlider {
+- (void)didTouchUp:(WSAVProgressSlider *)progressSlider {
     if ([_delegate respondsToSelector:@selector(didTouchUp:)]) {
         [_delegate didTouchUp:progressSlider];
     }
 }
 
-- (void)didTouchCancel:(WSProgressSlider *)progressSlider {
+- (void)didTouchCancel:(WSAVProgressSlider *)progressSlider {
     if ([_delegate respondsToSelector:@selector(didTouchCancel:)]) {
         [_delegate didTouchCancel:progressSlider];
     }
