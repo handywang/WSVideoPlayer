@@ -1,5 +1,5 @@
 //
-//  WSVideoVolumeButton.h
+//  WSAVVideoVolumeButton.h
 //  WeSee
 //
 //  Created by handy on 8/17/13.
@@ -8,5 +8,5 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WSVideoVolumeButton : UIView
+@interface WSAVVideoVolumeButton : UIView
 @end

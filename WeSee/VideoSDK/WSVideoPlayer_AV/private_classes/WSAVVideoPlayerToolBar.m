@@ -10,13 +10,13 @@
 #import "UIViewAdditions.h"
 #import "WSConst.h"
 #import <QuartzCore/QuartzCore.h>
-#import "WSVideoVolumeButton.h"
+#import "WSAVVideoVolumeButton.h"
 
 @interface WSAVVideoPlayerToolBar()
 @property(nonatomic, retain)NSMutableArray      *assetArray;
 @property(nonatomic, retain)UIButton            *playBtn;
 @property(nonatomic, retain)UIButton            *playlistBtn;
-@property(nonatomic, retain)WSVideoVolumeButton *soundVolumeBtn;
+@property(nonatomic, retain)WSAVVideoVolumeButton *soundVolumeBtn;
 @end
 
 @implementation WSAVVideoPlayerToolBar
@@ -49,7 +49,7 @@
         self.playlistBtn.exclusiveTouch = YES;
         [self addSubview:self.playlistBtn];
         
-        self.soundVolumeBtn = [[WSVideoVolumeButton alloc] initWithFrame:CGRectMake(self.playlistBtn.left-self.playlistBtn.width,
+        self.soundVolumeBtn = [[WSAVVideoVolumeButton alloc] initWithFrame:CGRectMake(self.playlistBtn.left-self.playlistBtn.width,
                                                                                     0,
                                                                                     self.playlistBtn.width,
                                                                                     self.height)];

@@ -1,12 +1,12 @@
 //
-//  WSVideoVolumeButton.m
+//  WSAVVideoVolumeButton.m
 //  WeSee
 //
 //  Created by handy on 8/17/13.
 //  Copyright (c) 2013 handy. All rights reserved.
 //
 
-#import "WSVideoVolumeButton.h"
+#import "WSAVVideoVolumeButton.h"
 #import "UIViewAdditions.h"
 #import <AudioToolbox/AudioToolbox.h>
 #import <MediaPlayer/MediaPlayer.h>
@@ -25,11 +25,11 @@ void audioVolumeChangeListenerCallback (void *inUserData,
     _volumeView.image = [UIImage imageNamed:[NSString stringWithFormat:@"volume_%d.png", _index]];
 }
 
-@interface WSVideoVolumeButton()
+@interface WSAVVideoVolumeButton()
 @property (nonatomic, retain)UIImageView *volumeView;
 @end
 
-@implementation WSVideoVolumeButton
+@implementation WSAVVideoVolumeButton
 
 #pragma mark - Lifecycle
 - (id)initWithFrame:(CGRect)frame {
