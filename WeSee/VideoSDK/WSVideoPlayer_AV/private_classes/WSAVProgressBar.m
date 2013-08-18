@@ -1,24 +1,24 @@
 //
-//  WSProgressSlider.m
+//  WSAVProgressBar.m
 //  WeSee
 //
 //  Created by handy on 7/31/13.
 //  Copyright (c) 2013 handy. All rights reserved.
 //
 
-#import "WSProgressBar.h"
+#import "WSAVProgressBar.h"
 #import "WSConst.h"
 #import "UIViewAdditions.h"
 #import <QuartzCore/QuartzCore.h>
 
 #define kTimeLabelTextFontSize                  (18.0f)
 
-@interface WSProgressBar()
+@interface WSAVProgressBar()
 @property (nonatomic, retain)UILabel  *passedTimeLabel;
 @property (nonatomic, retain)UILabel  *leftTimeLabel;
 @end
 
-@implementation WSProgressBar
+@implementation WSAVProgressBar
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];

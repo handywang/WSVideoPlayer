@@ -61,7 +61,7 @@
                                               (self.height-CGRectGetHeight(self.frame))/2.0f,
                                               self.playlistBtn.left-CGRectGetMaxX(self.playBtn.frame)-self.playlistBtn.width,
                                               CGRectGetHeight(self.frame));
-        self.progressBar = [[[WSProgressBar alloc] initWithFrame:_progressBarFrame] autorelease];
+        self.progressBar = [[[WSAVProgressBar alloc] initWithFrame:_progressBarFrame] autorelease];
         self.progressBar.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleRightMargin;
         self.progressBar.delegate = self;
         self.progressBar.exclusiveTouch = YES;

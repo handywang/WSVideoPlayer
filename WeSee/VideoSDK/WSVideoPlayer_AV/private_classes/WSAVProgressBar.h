@@ -1,5 +1,5 @@
 //
-//  WSProgressSlider.h
+//  WSAVProgressBar.h
 //  WeSee
 //
 //  Created by handy on 7/31/13.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "WSProgressSlider.h"
 
-@interface WSProgressBar : UIView
+@interface WSAVProgressBar : UIView
 @property (nonatomic, assign)id delegate;
 @property (nonatomic, retain)WSProgressSlider *progressSlider;
 

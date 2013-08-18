@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "WSProgressBar.h"
+#import "WSAVProgressBar.h"
 
 typedef enum {
     WSVideoPlayerPlayBtnStatus_Stop,
@@ -18,7 +18,7 @@ typedef enum {
 @interface WSAVVideoPlayerToolBar : UIView
 @property(nonatomic, assign)id delegate;
 @property(nonatomic, assign)WSVideoPlayerPlayBtnStatus playBtnStatus;
-@property(nonatomic, retain)WSProgressBar    *progressBar;
+@property(nonatomic, retain)WSAVProgressBar    *progressBar;
 
 - (void)setPlayBtnStatus:(WSVideoPlayerPlayBtnStatus)playBtnStatus;
 @end
