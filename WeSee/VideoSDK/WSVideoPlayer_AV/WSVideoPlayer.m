@@ -100,31 +100,8 @@ static void *SNPlayerViewPlayerRateObservationContext = &SNPlayerViewPlayerRateO
         [self addGestureRecognizer:_tapGesture];
         [_tapGesture release];
         _tapGesture = nil;
-
-//        [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(startPlayerMonitor) userInfo:nil repeats:YES];
     }
     return self;
-}
-
-- (void)startPlayerMonitor {
-    AVPlayerStatus _status = self.player.status;
-    NSString *_statusStr = nil;
-    switch (_status) {
-        case AVPlayerStatusUnknown: {
-            _statusStr = @"AVPlayerStatusUnknown";
-            break;
-        }
-        case AVPlayerStatusReadyToPlay: {
-            _statusStr = @"AVPlayerStatusReadyToPlay";
-            break;
-        }
-        case AVPlayerStatusFailed: {
-            _statusStr = @"AVPlayerStatusFailed";
-            break;
-        }
-    }
-
-    NSLogInfo(@"======Player status:%@, rate:%f", _statusStr, self.player.rate);
 }
 
 - (void)dealloc {
@@ -203,16 +180,6 @@ static void *SNPlayerViewPlayerRateObservationContext = &SNPlayerViewPlayerRateO
 }
 
 #pragma mark - UIGestureRecognizerDelegate
-// called when a gesture recognizer attempts to transition out of UIGestureRecognizerStatePossible. returning NO causes it to transition to UIGestureRecognizerStateFailed
-//- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer;
-//
-//// called when the recognition of one of gestureRecognizer or otherGestureRecognizer would be blocked by the other
-//// return YES to allow both to recognize simultaneously. the default implementation returns NO (by default no two gestures can be recognized simultaneously)
-////
-//// note: returning YES is guaranteed to allow simultaneous recognition. returning NO is not guaranteed to prevent simultaneous recognition, as the other gesture's delegate may return YES
-//- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer;
-
-// called before touchesBegan:withEvent: is called on the gesture recognizer for a new touch. return NO to prevent the gesture recognizer from seeing this touch
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
     return [touch.view isKindOfClass:[WSVideoPlayer class]];
 }
