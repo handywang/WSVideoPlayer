@@ -1,5 +1,5 @@
 //
-//  WSVideoPlayerToolBar.h
+//  WSAVVideoPlayerToolBar.h
 //  WeSee
 //
 //  Created by handy on 7/24/13.
@@ -15,7 +15,7 @@ typedef enum {
     WSVideoPlayerPlayBtnStatus_Pause
 } WSVideoPlayerPlayBtnStatus;
 
-@interface WSVideoPlayerToolBar : UIView
+@interface WSAVVideoPlayerToolBar : UIView
 @property(nonatomic, assign)id delegate;
 @property(nonatomic, assign)WSVideoPlayerPlayBtnStatus playBtnStatus;
 @property(nonatomic, retain)WSProgressBar    *progressBar;
@@ -23,7 +23,7 @@ typedef enum {
 - (void)setPlayBtnStatus:(WSVideoPlayerPlayBtnStatus)playBtnStatus;
 @end
 
-@protocol WSVideoPlayerToolBarDelegate
+@protocol WSAVVideoPlayerToolBarDelegate
 - (void)didTapToPlay;
 - (void)didTapToPause;
 - (void)didTapPlaylistBtn;

@@ -15,7 +15,7 @@
 
 #import "WSConst.h"
 #import "WSVideoPlayerMsgBox.h"
-#import "WSVideoPlayerToolBar.h"
+#import "WSAVVideoPlayerToolBar.h"
 #import "WSLoadingView.h"
 
 /* Asset keys */
@@ -39,7 +39,7 @@ static void *SNPlayerViewPlayerRateObservationContext = &SNPlayerViewPlayerRateO
 @property(nonatomic, retain)AVQueuePlayer           *player;
 @property(nonatomic, retain)WSVideoPlayerMsgBox     *msgBox;
 @property(nonatomic, retain)UIImageView             *poster;
-@property(nonatomic, retain)WSVideoPlayerToolBar    *toolBar;
+@property(nonatomic, retain)WSAVVideoPlayerToolBar    *toolBar;
 @property(nonatomic, assign)BOOL                    isFinishedToShowOrHideToolBar;
 @property(nonatomic, retain)WSVideoPlaylistView     *playlistView;
 
@@ -78,7 +78,7 @@ static void *SNPlayerViewPlayerRateObservationContext = &SNPlayerViewPlayerRateO
         } else {
             _toolBarFrame = CGRectMake(0, CGRectGetHeight(self.bounds)-kToolBarHeight_Pad, self.bounds.size.width, kToolBarHeight_Pad);
         }
-        self.toolBar = [[[WSVideoPlayerToolBar alloc] initWithFrame:_toolBarFrame] autorelease];
+        self.toolBar = [[[WSAVVideoPlayerToolBar alloc] initWithFrame:_toolBarFrame] autorelease];
         self.toolBar.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleTopMargin;
         self.toolBar.delegate = self;
         [self addSubview:self.toolBar];
@@ -184,7 +184,7 @@ static void *SNPlayerViewPlayerRateObservationContext = &SNPlayerViewPlayerRateO
     return [touch.view isKindOfClass:[WSAVVideoPlayer class]];
 }
 
-#pragma mark - WSVideoPlayerToolBarDelegate
+#pragma mark - WSAVVideoPlayerToolBarDelegate
 - (void)didTapToPlay {
     NSLogInfo(@"INFO: Tap to play...");
     [self play];

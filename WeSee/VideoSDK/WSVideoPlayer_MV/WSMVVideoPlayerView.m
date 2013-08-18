@@ -181,7 +181,7 @@
     [self.controlBar.progressBar updateToCurrentTime:_currentPlaybackTime duration:_duration];
 }
 
-#pragma mark - WSVideoPlayerToolBarDelegate
+#pragma mark - WSAVVideoPlayerToolBarDelegate
 - (void)didTapToPlay {
     NSLogInfo(@"INFO: Tap to play...");
     [self play];

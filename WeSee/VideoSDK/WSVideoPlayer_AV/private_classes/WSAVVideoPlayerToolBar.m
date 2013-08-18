@@ -1,25 +1,25 @@
 //
-//  WSVideoPlayerToolBar.m
+//  WSAVVideoPlayerToolBar.m
 //  WeSee
 //
 //  Created by handy on 7/24/13.
 //  Copyright (c) 2013 handy. All rights reserved.
 //
 
-#import "WSVideoPlayerToolBar.h"
+#import "WSAVVideoPlayerToolBar.h"
 #import "UIViewAdditions.h"
 #import "WSConst.h"
 #import <QuartzCore/QuartzCore.h>
 #import "WSVideoVolumeButton.h"
 
-@interface WSVideoPlayerToolBar()
+@interface WSAVVideoPlayerToolBar()
 @property(nonatomic, retain)NSMutableArray      *assetArray;
 @property(nonatomic, retain)UIButton            *playBtn;
 @property(nonatomic, retain)UIButton            *playlistBtn;
 @property(nonatomic, retain)WSVideoVolumeButton *soundVolumeBtn;
 @end
 
-@implementation WSVideoPlayerToolBar
+@implementation WSAVVideoPlayerToolBar
 @synthesize playBtnStatus = _playBtnStatus;
 
 #pragma mark - Lifecycle

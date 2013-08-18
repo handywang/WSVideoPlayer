@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "WSVideoModel.h"
-#import "WSVideoPlayerToolBar.h"
+#import "WSAVVideoPlayerToolBar.h"
 #import "WSVideoPlaylistView.h"
 
-@interface WSAVVideoPlayer : UIView<WSVideoPlayerToolBarDelegate, UIGestureRecognizerDelegate, WSVideoPlaylistViewDelegate>
+@interface WSAVVideoPlayer : UIView<WSAVVideoPlayerToolBarDelegate, UIGestureRecognizerDelegate, WSVideoPlaylistViewDelegate>
 @property(nonatomic, retain)NSMutableArray *videoModels;
 @property(nonatomic, assign)id delegate;
 
