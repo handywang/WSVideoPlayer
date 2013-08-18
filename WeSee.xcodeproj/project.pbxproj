@@ -11,6 +11,15 @@
 		33048A2B17BD326E00CFF805 /* WSMVVideoProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 33048A2A17BD326E00CFF805 /* WSMVVideoProgressBar.m */; };
 		33048A2E17BD3E8C00CFF805 /* WSMVProgressSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 33048A2D17BD3E8C00CFF805 /* WSMVProgressSlider.m */; };
 		33311CF917A561EC002303F2 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33311CF817A561EC002303F2 /* CoreMedia.framework */; };
+		33B4ACA017C1094B003D7E2D /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B4AC9A17C1094B003D7E2D /* UIViewAdditions.m */; };
+		33B4ACA117C1094B003D7E2D /* WSUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B4AC9D17C1094B003D7E2D /* WSUtility.m */; };
+		33B4ACA217C1094B003D7E2D /* WSVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B4AC9F17C1094B003D7E2D /* WSVideoModel.m */; };
+		33B4ACB017C10983003D7E2D /* WSProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B4ACA517C10983003D7E2D /* WSProgressBar.m */; };
+		33B4ACB117C10983003D7E2D /* WSProgressSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B4ACA717C10983003D7E2D /* WSProgressSlider.m */; };
+		33B4ACB217C10983003D7E2D /* WSVideoPlayerMsgBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B4ACA917C10983003D7E2D /* WSVideoPlayerMsgBox.m */; };
+		33B4ACB317C10983003D7E2D /* WSVideoPlayerToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B4ACAB17C10983003D7E2D /* WSVideoPlayerToolBar.m */; };
+		33B4ACB417C10983003D7E2D /* WSVideoPlaylistView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B4ACAD17C10983003D7E2D /* WSVideoPlaylistView.m */; };
+		33B4ACB517C10983003D7E2D /* WSVideoVolumeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B4ACAF17C10983003D7E2D /* WSVideoVolumeButton.m */; };
 		33BAF9A217A01238000F19F4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33BAF9A117A01238000F19F4 /* UIKit.framework */; };
 		33BAF9A417A01238000F19F4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33BAF9A317A01238000F19F4 /* Foundation.framework */; };
 		33BAF9A617A01238000F19F4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33BAF9A517A01238000F19F4 /* CoreGraphics.framework */; };
@@ -24,21 +33,12 @@
 		33BAF9C217A0127E000F19F4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33BAF9C117A0127E000F19F4 /* AVFoundation.framework */; };
 		33C879EB17BF602B005AA2BA /* sound_volume_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33C879E917BF602A005AA2BA /* sound_volume_btn@2x.png */; };
 		33C879EC17BF602B005AA2BA /* sound_volume_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 33C879EA17BF602A005AA2BA /* sound_volume_btn.png */; };
-		33C879EF17BF62F2005AA2BA /* WSVideoVolumeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C879EE17BF62F2005AA2BA /* WSVideoVolumeButton.m */; };
 		33C87A0C17BF6D0D005AA2BA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C87A0B17BF6D0D005AA2BA /* AudioToolbox.framework */; };
 		714831FD17A2253300890F0A /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 714831FC17A2253300890F0A /* MediaPlayer.framework */; };
 		71718A1217BA388100E077BF /* WSRootTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71718A1117BA388100E077BF /* WSRootTableViewController.m */; };
 		718D1F7F17A0D81B00CA4040 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 718D1F7E17A0D81A00CA4040 /* QuartzCore.framework */; };
 		71DA534517BB7F0000799EA2 /* WSMVDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DA534417BB7F0000799EA2 /* WSMVDemoViewController.m */; };
-		71DA541E17BB881500799EA2 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DA53AD17BB881500799EA2 /* UIViewAdditions.m */; };
-		71DA541F17BB881500799EA2 /* WSProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DA53B017BB881500799EA2 /* WSProgressBar.m */; };
-		71DA542017BB881500799EA2 /* WSProgressSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DA53B217BB881500799EA2 /* WSProgressSlider.m */; };
-		71DA542117BB881500799EA2 /* WSUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DA53B417BB881500799EA2 /* WSUtility.m */; };
-		71DA542217BB881500799EA2 /* WSVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DA53B617BB881500799EA2 /* WSVideoModel.m */; };
 		71DA542317BB881500799EA2 /* WSVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DA53B817BB881500799EA2 /* WSVideoPlayer.m */; };
-		71DA542417BB881500799EA2 /* WSVideoPlayerMsgBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DA53BA17BB881500799EA2 /* WSVideoPlayerMsgBox.m */; };
-		71DA542517BB881500799EA2 /* WSVideoPlayerToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DA53BC17BB881500799EA2 /* WSVideoPlayerToolBar.m */; };
-		71DA542617BB881500799EA2 /* WSVideoPlaylistView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DA53BE17BB881500799EA2 /* WSVideoPlaylistView.m */; };
 		71DA548C17BB899D00799EA2 /* audio_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 71DA542917BB899D00799EA2 /* audio_off.png */; };
 		71DA548D17BB899D00799EA2 /* audio_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71DA542A17BB899D00799EA2 /* audio_off@2x.png */; };
 		71DA548E17BB899D00799EA2 /* audio_off_hl.png in Resources */ = {isa = PBXBuildFile; fileRef = 71DA542B17BB899D00799EA2 /* audio_off_hl.png */; };
@@ -146,6 +146,25 @@
 		33048A2C17BD3E8C00CFF805 /* WSMVProgressSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSMVProgressSlider.h; sourceTree = "<group>"; };
 		33048A2D17BD3E8C00CFF805 /* WSMVProgressSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSMVProgressSlider.m; sourceTree = "<group>"; };
 		33311CF817A561EC002303F2 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		33B4AC9917C1094B003D7E2D /* UIViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewAdditions.h; sourceTree = "<group>"; };
+		33B4AC9A17C1094B003D7E2D /* UIViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewAdditions.m; sourceTree = "<group>"; };
+		33B4AC9B17C1094B003D7E2D /* WSConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSConst.h; sourceTree = "<group>"; };
+		33B4AC9C17C1094B003D7E2D /* WSUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSUtility.h; sourceTree = "<group>"; };
+		33B4AC9D17C1094B003D7E2D /* WSUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSUtility.m; sourceTree = "<group>"; };
+		33B4AC9E17C1094B003D7E2D /* WSVideoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSVideoModel.h; sourceTree = "<group>"; };
+		33B4AC9F17C1094B003D7E2D /* WSVideoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSVideoModel.m; sourceTree = "<group>"; };
+		33B4ACA417C10983003D7E2D /* WSProgressBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSProgressBar.h; sourceTree = "<group>"; };
+		33B4ACA517C10983003D7E2D /* WSProgressBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSProgressBar.m; sourceTree = "<group>"; };
+		33B4ACA617C10983003D7E2D /* WSProgressSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSProgressSlider.h; sourceTree = "<group>"; };
+		33B4ACA717C10983003D7E2D /* WSProgressSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSProgressSlider.m; sourceTree = "<group>"; };
+		33B4ACA817C10983003D7E2D /* WSVideoPlayerMsgBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSVideoPlayerMsgBox.h; sourceTree = "<group>"; };
+		33B4ACA917C10983003D7E2D /* WSVideoPlayerMsgBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSVideoPlayerMsgBox.m; sourceTree = "<group>"; };
+		33B4ACAA17C10983003D7E2D /* WSVideoPlayerToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSVideoPlayerToolBar.h; sourceTree = "<group>"; };
+		33B4ACAB17C10983003D7E2D /* WSVideoPlayerToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSVideoPlayerToolBar.m; sourceTree = "<group>"; };
+		33B4ACAC17C10983003D7E2D /* WSVideoPlaylistView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSVideoPlaylistView.h; sourceTree = "<group>"; };
+		33B4ACAD17C10983003D7E2D /* WSVideoPlaylistView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSVideoPlaylistView.m; sourceTree = "<group>"; };
+		33B4ACAE17C10983003D7E2D /* WSVideoVolumeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSVideoVolumeButton.h; sourceTree = "<group>"; };
+		33B4ACAF17C10983003D7E2D /* WSVideoVolumeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSVideoVolumeButton.m; sourceTree = "<group>"; };
 		33BAF99E17A01238000F19F4 /* WeSee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeSee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33BAF9A117A01238000F19F4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		33BAF9A317A01238000F19F4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -164,8 +183,6 @@
 		33BAF9C117A0127E000F19F4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		33C879E917BF602A005AA2BA /* sound_volume_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sound_volume_btn@2x.png"; sourceTree = "<group>"; };
 		33C879EA17BF602A005AA2BA /* sound_volume_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sound_volume_btn.png; sourceTree = "<group>"; };
-		33C879ED17BF62F2005AA2BA /* WSVideoVolumeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSVideoVolumeButton.h; sourceTree = "<group>"; };
-		33C879EE17BF62F2005AA2BA /* WSVideoVolumeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSVideoVolumeButton.m; sourceTree = "<group>"; };
 		33C87A0B17BF6D0D005AA2BA /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		714831FC17A2253300890F0A /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		7148321917A22B8300890F0A /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -174,25 +191,8 @@
 		718D1F7E17A0D81A00CA4040 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		71DA534317BB7F0000799EA2 /* WSMVDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSMVDemoViewController.h; sourceTree = "<group>"; };
 		71DA534417BB7F0000799EA2 /* WSMVDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSMVDemoViewController.m; sourceTree = "<group>"; };
-		71DA53AC17BB881500799EA2 /* UIViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewAdditions.h; sourceTree = "<group>"; };
-		71DA53AD17BB881500799EA2 /* UIViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewAdditions.m; sourceTree = "<group>"; };
-		71DA53AE17BB881500799EA2 /* WSConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSConst.h; sourceTree = "<group>"; };
-		71DA53AF17BB881500799EA2 /* WSProgressBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSProgressBar.h; sourceTree = "<group>"; };
-		71DA53B017BB881500799EA2 /* WSProgressBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSProgressBar.m; sourceTree = "<group>"; };
-		71DA53B117BB881500799EA2 /* WSProgressSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSProgressSlider.h; sourceTree = "<group>"; };
-		71DA53B217BB881500799EA2 /* WSProgressSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSProgressSlider.m; sourceTree = "<group>"; };
-		71DA53B317BB881500799EA2 /* WSUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSUtility.h; sourceTree = "<group>"; };
-		71DA53B417BB881500799EA2 /* WSUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSUtility.m; sourceTree = "<group>"; };
-		71DA53B517BB881500799EA2 /* WSVideoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSVideoModel.h; sourceTree = "<group>"; };
-		71DA53B617BB881500799EA2 /* WSVideoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSVideoModel.m; sourceTree = "<group>"; };
 		71DA53B717BB881500799EA2 /* WSVideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSVideoPlayer.h; sourceTree = "<group>"; };
 		71DA53B817BB881500799EA2 /* WSVideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSVideoPlayer.m; sourceTree = "<group>"; };
-		71DA53B917BB881500799EA2 /* WSVideoPlayerMsgBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSVideoPlayerMsgBox.h; sourceTree = "<group>"; };
-		71DA53BA17BB881500799EA2 /* WSVideoPlayerMsgBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSVideoPlayerMsgBox.m; sourceTree = "<group>"; };
-		71DA53BB17BB881500799EA2 /* WSVideoPlayerToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSVideoPlayerToolBar.h; sourceTree = "<group>"; };
-		71DA53BC17BB881500799EA2 /* WSVideoPlayerToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSVideoPlayerToolBar.m; sourceTree = "<group>"; };
-		71DA53BD17BB881500799EA2 /* WSVideoPlaylistView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSVideoPlaylistView.h; sourceTree = "<group>"; };
-		71DA53BE17BB881500799EA2 /* WSVideoPlaylistView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSVideoPlaylistView.m; sourceTree = "<group>"; };
 		71DA542917BB899D00799EA2 /* audio_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = audio_off.png; sourceTree = "<group>"; };
 		71DA542A17BB899D00799EA2 /* audio_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "audio_off@2x.png"; sourceTree = "<group>"; };
 		71DA542B17BB899D00799EA2 /* audio_off_hl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = audio_off_hl.png; sourceTree = "<group>"; };
@@ -317,6 +317,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33B4AC9817C1094B003D7E2D /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				33B4AC9917C1094B003D7E2D /* UIViewAdditions.h */,
+				33B4AC9A17C1094B003D7E2D /* UIViewAdditions.m */,
+				33B4AC9B17C1094B003D7E2D /* WSConst.h */,
+				33B4AC9C17C1094B003D7E2D /* WSUtility.h */,
+				33B4AC9D17C1094B003D7E2D /* WSUtility.m */,
+				33B4AC9E17C1094B003D7E2D /* WSVideoModel.h */,
+				33B4AC9F17C1094B003D7E2D /* WSVideoModel.m */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
+		33B4ACA317C10983003D7E2D /* private_classes */ = {
+			isa = PBXGroup;
+			children = (
+				33B4ACA417C10983003D7E2D /* WSProgressBar.h */,
+				33B4ACA517C10983003D7E2D /* WSProgressBar.m */,
+				33B4ACA617C10983003D7E2D /* WSProgressSlider.h */,
+				33B4ACA717C10983003D7E2D /* WSProgressSlider.m */,
+				33B4ACA817C10983003D7E2D /* WSVideoPlayerMsgBox.h */,
+				33B4ACA917C10983003D7E2D /* WSVideoPlayerMsgBox.m */,
+				33B4ACAA17C10983003D7E2D /* WSVideoPlayerToolBar.h */,
+				33B4ACAB17C10983003D7E2D /* WSVideoPlayerToolBar.m */,
+				33B4ACAC17C10983003D7E2D /* WSVideoPlaylistView.h */,
+				33B4ACAD17C10983003D7E2D /* WSVideoPlaylistView.m */,
+				33B4ACAE17C10983003D7E2D /* WSVideoVolumeButton.h */,
+				33B4ACAF17C10983003D7E2D /* WSVideoVolumeButton.m */,
+			);
+			path = private_classes;
+			sourceTree = "<group>";
+		};
 		33BAF99517A01238000F19F4 = {
 			isa = PBXGroup;
 			children = (
@@ -395,25 +428,7 @@
 			children = (
 				71DA53B717BB881500799EA2 /* WSVideoPlayer.h */,
 				71DA53B817BB881500799EA2 /* WSVideoPlayer.m */,
-				71DA53B917BB881500799EA2 /* WSVideoPlayerMsgBox.h */,
-				71DA53BA17BB881500799EA2 /* WSVideoPlayerMsgBox.m */,
-				71DA53BD17BB881500799EA2 /* WSVideoPlaylistView.h */,
-				71DA53BE17BB881500799EA2 /* WSVideoPlaylistView.m */,
-				71DA53BB17BB881500799EA2 /* WSVideoPlayerToolBar.h */,
-				71DA53BC17BB881500799EA2 /* WSVideoPlayerToolBar.m */,
-				71DA53AF17BB881500799EA2 /* WSProgressBar.h */,
-				71DA53B017BB881500799EA2 /* WSProgressBar.m */,
-				71DA53B117BB881500799EA2 /* WSProgressSlider.h */,
-				71DA53B217BB881500799EA2 /* WSProgressSlider.m */,
-				33C879ED17BF62F2005AA2BA /* WSVideoVolumeButton.h */,
-				33C879EE17BF62F2005AA2BA /* WSVideoVolumeButton.m */,
-				71DA53B517BB881500799EA2 /* WSVideoModel.h */,
-				71DA53B617BB881500799EA2 /* WSVideoModel.m */,
-				71DA53AE17BB881500799EA2 /* WSConst.h */,
-				71DA53B317BB881500799EA2 /* WSUtility.h */,
-				71DA53B417BB881500799EA2 /* WSUtility.m */,
-				71DA53AC17BB881500799EA2 /* UIViewAdditions.h */,
-				71DA53AD17BB881500799EA2 /* UIViewAdditions.m */,
+				33B4ACA317C10983003D7E2D /* private_classes */,
 			);
 			path = WSVideoPlayer_AV;
 			sourceTree = "<group>";
@@ -440,6 +455,7 @@
 			children = (
 				71DA542817BB899D00799EA2 /* images */,
 				71DA548117BB899D00799EA2 /* refrenced_libs */,
+				33B4AC9817C1094B003D7E2D /* classes */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -773,15 +789,7 @@
 				71FBB67C17BB6A2B008F8A5D /* WSAVDemoViewController.m in Sources */,
 				71FBB68017BB6A2B008F8A5D /* WSWebVideoViewController.m in Sources */,
 				71DA534517BB7F0000799EA2 /* WSMVDemoViewController.m in Sources */,
-				71DA541E17BB881500799EA2 /* UIViewAdditions.m in Sources */,
-				71DA541F17BB881500799EA2 /* WSProgressBar.m in Sources */,
-				71DA542017BB881500799EA2 /* WSProgressSlider.m in Sources */,
-				71DA542117BB881500799EA2 /* WSUtility.m in Sources */,
-				71DA542217BB881500799EA2 /* WSVideoModel.m in Sources */,
 				71DA542317BB881500799EA2 /* WSVideoPlayer.m in Sources */,
-				71DA542417BB881500799EA2 /* WSVideoPlayerMsgBox.m in Sources */,
-				71DA542517BB881500799EA2 /* WSVideoPlayerToolBar.m in Sources */,
-				71DA542617BB881500799EA2 /* WSVideoPlaylistView.m in Sources */,
 				71DA54E417BB899D00799EA2 /* JSONKit.m in Sources */,
 				71DA54E917BB899D00799EA2 /* WSLoadingView.m in Sources */,
 				71DA54EC17BB8AB800799EA2 /* WSMVVideoPlayerView.m in Sources */,
@@ -789,7 +797,15 @@
 				33048A2817BD323700CFF805 /* WSMVVideoControlBar.m in Sources */,
 				33048A2B17BD326E00CFF805 /* WSMVVideoProgressBar.m in Sources */,
 				33048A2E17BD3E8C00CFF805 /* WSMVProgressSlider.m in Sources */,
-				33C879EF17BF62F2005AA2BA /* WSVideoVolumeButton.m in Sources */,
+				33B4ACA017C1094B003D7E2D /* UIViewAdditions.m in Sources */,
+				33B4ACA117C1094B003D7E2D /* WSUtility.m in Sources */,
+				33B4ACA217C1094B003D7E2D /* WSVideoModel.m in Sources */,
+				33B4ACB017C10983003D7E2D /* WSProgressBar.m in Sources */,
+				33B4ACB117C10983003D7E2D /* WSProgressSlider.m in Sources */,
+				33B4ACB217C10983003D7E2D /* WSVideoPlayerMsgBox.m in Sources */,
+				33B4ACB317C10983003D7E2D /* WSVideoPlayerToolBar.m in Sources */,
+				33B4ACB417C10983003D7E2D /* WSVideoPlaylistView.m in Sources */,
+				33B4ACB517C10983003D7E2D /* WSVideoVolumeButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
