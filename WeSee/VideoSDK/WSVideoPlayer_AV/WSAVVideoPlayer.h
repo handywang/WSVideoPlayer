@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "WSVideoModel.h"
 #import "WSAVVideoPlayerToolBar.h"
 #import "WSAVVideoPlaylistView.h"
 

@@ -9,6 +9,7 @@
 #import "WSMVVideoControlBar.h"
 #import "UIViewAdditions.h"
 #import "WSMVProgressSlider.h"
+#import "WSConst.h"
 
 @interface WSMVVideoControlBar()
 @property (nonatomic, retain)UIButton *playBtn;

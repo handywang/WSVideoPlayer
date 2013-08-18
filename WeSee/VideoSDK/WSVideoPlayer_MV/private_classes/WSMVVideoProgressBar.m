@@ -8,6 +8,7 @@
 
 #import "WSMVVideoProgressBar.h"
 #import "WSMVProgressSlider.h"
+#import "WSConst.h"
 
 #define kTimeLabelTextFontSize                  (18.0f)
 

@@ -12,6 +12,7 @@
 #import "UIViewAdditions.h"
 #import "WSMVVideoControlBar.h"
 #import "WSMVProgressSlider.h"
+#import "WSConst.h"
 
 #define kThumbnailBtnWidth                      (64.0f)
 #define kThumbnailBtnHeight                     (64.0f)

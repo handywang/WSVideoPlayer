@@ -10,6 +10,8 @@
 #import "UIViewAdditions.h"
 #import <AudioToolbox/AudioToolbox.h>
 #import <MediaPlayer/MediaPlayer.h>
+#import "WSUtility.h"
+#import "WSConst.h"
 
 void audioVolumeChangeListenerCallback (void *inUserData,
                                         AudioSessionPropertyID inPropertyID,

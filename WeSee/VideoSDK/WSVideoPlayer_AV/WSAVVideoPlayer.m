@@ -13,6 +13,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import <CoreMedia/CoreMedia.h>
 
+#import "WSVideoModel.h"
 #import "WSConst.h"
 #import "WSAVVideoPlayerMsgBox.h"
 #import "WSAVVideoPlayerToolBar.h"

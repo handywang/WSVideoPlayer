@@ -7,6 +7,7 @@
 //
 
 #import "WSMVProgressSlider.h"
+#import "WSUtility.h"
 
 @implementation WSMVProgressSlider
 

@@ -7,6 +7,8 @@
 //
 
 #import "WSAVProgressSlider.h"
+#import "WSUtility.h"
+#import "WSConst.h"
 
 @implementation WSAVProgressSlider
 
