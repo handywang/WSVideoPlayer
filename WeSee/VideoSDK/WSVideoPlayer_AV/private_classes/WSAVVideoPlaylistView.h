@@ -9,12 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "WSVideoModel.h"
 
-@interface WSVideoPlaylistView : UITableView<UITableViewDelegate, UITableViewDataSource>
+@interface WSAVVideoPlaylistView : UITableView<UITableViewDelegate, UITableViewDataSource>
 @property(nonatomic, assign)id iDelegate;
 
 - (void)reloadModel:(NSMutableArray *)videoModels;
 @end
 
-@protocol WSVideoPlaylistViewDelegate
+@protocol WSAVVideoPlaylistViewDelegate
 - (void)didSelectAChannelAtIndex:(NSInteger)index;
 @end

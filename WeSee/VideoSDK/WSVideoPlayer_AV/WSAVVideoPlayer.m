@@ -41,7 +41,7 @@ static void *SNPlayerViewPlayerRateObservationContext = &SNPlayerViewPlayerRateO
 @property(nonatomic, retain)UIImageView             *poster;
 @property(nonatomic, retain)WSAVVideoPlayerToolBar    *toolBar;
 @property(nonatomic, assign)BOOL                    isFinishedToShowOrHideToolBar;
-@property(nonatomic, retain)WSVideoPlaylistView     *playlistView;
+@property(nonatomic, retain)WSAVVideoPlaylistView     *playlistView;
 
 @property(nonatomic, retain)NSMutableArray          *assetArray;
 @property(nonatomic, retain)NSMutableArray          *playerItemArray;
@@ -85,7 +85,7 @@ static void *SNPlayerViewPlayerRateObservationContext = &SNPlayerViewPlayerRateO
         self.isFinishedToShowOrHideToolBar = YES;
         
         CGRect _playlistViewFrame = CGRectMake(self.width, 0, kPlaylistViewWidth, CGRectGetHeight(self.bounds));
-        self.playlistView = [[[WSVideoPlaylistView alloc] initWithFrame:_playlistViewFrame style:UITableViewStylePlain] autorelease];
+        self.playlistView = [[[WSAVVideoPlaylistView alloc] initWithFrame:_playlistViewFrame style:UITableViewStylePlain] autorelease];
         self.playlistView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleLeftMargin;
         self.playlistView.iDelegate = self;
         self.playlistView.hidden = YES;
@@ -201,7 +201,7 @@ static void *SNPlayerViewPlayerRateObservationContext = &SNPlayerViewPlayerRateO
     if (_isPlaylistShown) [self hidePlaylistView]; else [self showPlaylistView];
 }
 
-#pragma mark - WSVideoPlaylistViewDelegate
+#pragma mark - WSAVVideoPlaylistViewDelegate
 - (void)didSelectAChannelAtIndex:(NSInteger)index {
     [self hidePlaylistView];
     

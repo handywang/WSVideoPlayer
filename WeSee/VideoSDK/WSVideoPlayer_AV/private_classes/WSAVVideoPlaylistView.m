@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 handy. All rights reserved.
 //
 
-#import "WSVideoPlaylistView.h"
+#import "WSAVVideoPlaylistView.h"
 
-@interface WSVideoPlaylistView()
+@interface WSAVVideoPlaylistView()
 @property(nonatomic, retain)NSMutableArray *videoModels;
 @end
 
-@implementation WSVideoPlaylistView
+@implementation WSAVVideoPlaylistView
 
 #pragma mark - Lifecycle
 - (id)initWithFrame:(CGRect)frame style:(UITableViewStyle)style {
