@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface WSMVVideoPlayerView : UIView
+@property(nonatomic, retain)NSMutableArray *videoModels;
 @property (nonatomic, assign)id delegate;
 
 - (void)play;

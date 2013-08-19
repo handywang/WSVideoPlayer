@@ -13,18 +13,28 @@
 #import "WSMVVideoControlBar.h"
 #import "WSMVProgressSlider.h"
 #import "WSConst.h"
+#import "WSVideoModel.h"
+#import "WSLoadingView.h"
+#import "WSAVVideoPlayerMsgBox.h"
+#import "WSAVVideoPlaylistView.h"
 
 #define kThumbnailBtnWidth                      (64.0f)
 #define kThumbnailBtnHeight                     (64.0f)
 
 @interface WSMVVideoPlayerView()
-@property (nonatomic, retain)UIImageView *poster;
-@property (nonatomic, retain)UIButton *posterPlayBtn;
+@property (nonatomic, retain)WSLoadingView               *loadingView;
+@property (nonatomic, retain)UIImageView                 *poster;
+@property (nonatomic, retain)WSAVVideoPlayerMsgBox       *msgBox;
+@property (nonatomic, retain)WSAVVideoPlaylistView       *playlistView;
+@property (nonatomic, retain)UIButton                    *posterPlayBtn;
+@property (nonatomic, retain)WSMVVideoControlBar         *controlBar;
+
 @property (nonatomic, retain)MPMoviePlayerViewController *playerViewController;
 @property (nonatomic, retain)WSMVVideoPlayerViewObserver *observer;
-@property (nonatomic, retain)WSMVVideoControlBar         *controlBar;
+
 @property (nonatomic, assign)CGFloat                     rateBeforeTappingProgressBar;
 @property (nonatomic, retain)NSTimer                     *playbackTimeTimer;
+@property (nonatomic, assign)NSInteger                   selectedChannelIndex;
 @end
 
 @implementation WSMVVideoPlayerView
@@ -35,8 +45,9 @@
     if (self) {
         //===Load video resource
 //        _playerViewController = [[MPMoviePlayerViewController alloc] initWithContentURL:[NSURL URLWithString:@"http://live.gslb.letv.com/gslb?stream_id=cctvnew&tag=live&ext=m3u8&sign=live_ipad"]];
+        //WithContentURL:[NSURL URLWithString:@"http://data.vod.itc.cn/?new=/190/139/Sw0NUHpzEQLrAisgiAUXn4.mp4&ch=tv&cateCode=115101;115102;115103;115104&plat=null"]];
 
-        _playerViewController = [[MPMoviePlayerViewController alloc] initWithContentURL:[NSURL URLWithString:@"http://data.vod.itc.cn/?new=/190/139/Sw0NUHpzEQLrAisgiAUXn4.mp4&ch=tv&cateCode=115101;115102;115103;115104&plat=null"]];
+        _playerViewController = [[MPMoviePlayerViewController alloc] init];
         
         [_playerViewController.moviePlayer setShouldAutoplay:NO];
         [_playerViewController.moviePlayer prepareToPlay];
@@ -58,6 +69,12 @@
                                                  selector:@selector(moviePlayerPlaybackDidFinish:)
                                                      name:MPMoviePlayerPlaybackDidFinishNotification
                                                    object:self.playerViewController.moviePlayer];
+        
+        //Msg box
+        CGRect _msgBoxFrame = CGRectMake(-kMsgBoxWidth, (self.height-kMsgBoxHeight)/2.0f, kMsgBoxWidth, kMsgBoxHeight);
+        self.msgBox = [[[WSAVVideoPlayerMsgBox alloc] initWithFrame:_msgBoxFrame] autorelease];
+        self.msgBox.autoresizingMask = UIViewAutoresizingFlexibleRightMargin;
+        [self addSubview:self.msgBox];
         
         //Poster
         self.poster = [[[UIImageView alloc] initWithFrame:self.bounds] autorelease];
@@ -90,15 +107,31 @@
         self.controlBar.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleTopMargin;
         self.controlBar.delegate = self;
         [self addSubview:self.controlBar];
+        
+        //Playlist
+        CGRect _playlistViewFrame = CGRectMake(self.width, 0, kPlaylistViewWidth, CGRectGetHeight(self.bounds));
+        self.playlistView = [[[WSAVVideoPlaylistView alloc] initWithFrame:_playlistViewFrame style:UITableViewStylePlain] autorelease];
+        self.playlistView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleLeftMargin;
+        self.playlistView.iDelegate = self;
+        self.playlistView.hidden = YES;
+        [self addSubview:self.playlistView];
+        
+        //Loading view
+        self.loadingView = [[[WSLoadingView alloc] initWithSuperView:self] autorelease];
+        self.loadingView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleBottomMargin;
+        [self addSubview:self.loadingView];
     }
     return self;
 }
 
 - (void)dealloc {
+    self.videoModels = nil;
+    
+    self.loadingView = nil;
+    self.playlistView = nil;
+    self.msgBox = nil;
     self.posterPlayBtn = nil;
     self.poster = nil;
-    
-    [self removePlaybackTimeObserver];
     
     self.observer.delegate = nil;
 	[[NSNotificationCenter defaultCenter] removeObserver:self.observer];
@@ -112,6 +145,21 @@
     [super dealloc];
 }
 
+#pragma mark - Override
+- (void)setVideoModels:(NSMutableArray *)videoModels {
+    if (_videoModels != videoModels) {
+        [_videoModels release];
+        _videoModels = nil;
+        _videoModels = [videoModels retain];
+//        [self.playlistView reloadModel:_videoModels];
+        
+        if (_videoModels.count > 0) {
+            WSVideoModel *_firstModel = [_videoModels objectAtIndex:0];
+            self.poster.image = [UIImage imageNamed:_firstModel.poster];
+        }
+    }
+}
+
 #pragma mark - Public
 - (void)pause {
     [self.playerViewController.moviePlayer pause];
@@ -122,7 +170,22 @@
 }
 
 - (void)play {
-    [self.playerViewController.moviePlayer play];
+    if (self.controlBar.playBtnStatus == WSMVVideoPlayerPlayBtnStatus_Pause) {
+        [self.playerViewController.moviePlayer play];
+        return;
+    }
+    
+    if (self.videoModels.count > 0) {
+        WSVideoModel *_videoModel = nil;
+        if (_selectedChannelIndex >= 0 && _selectedChannelIndex < self.videoModels.count) {
+            _videoModel = [self.videoModels objectAtIndex:_selectedChannelIndex];
+        } else {
+            _videoModel = [self.videoModels objectAtIndex:0];
+        }
+        [self loadVideoSourceAndReadyToPlay:_videoModel];
+    } else {
+        [self noVideoSourceToPlay];
+    }
 }
 
 #pragma mark - Private
@@ -145,19 +208,75 @@
     }
 }
 
+- (void)loadVideoSourceAndReadyToPlay:(WSVideoModel *)videoModel {
+    [self.loadingView stopAnimation];
+    [self.loadingView startAnimation];
+    
+    if (self.videoModels.count <=0) {
+        [self noVideoSourceToPlay];
+        return;
+    }
+    
+    if (!(videoModel) || videoModel.sources.count <=0) {
+        [self noVideoSourceToPlay];
+    }
+    else {
+        [self.playerViewController.moviePlayer setContentURL:[NSURL URLWithString:[videoModel.sources objectAtIndex:0]]];
+    }
+}
+
+- (void)noVideoSourceToPlay {
+    [self hidePlaylistView];
+    [self.msgBox pushMsg:@"无数据可播放!"];
+    NSLogWarning(@"无数据可播放!");
+    [self.controlBar setPlayBtnStatus:WSMVVideoPlayerPlayBtnStatus_Stop];
+    [self.loadingView stopAnimation];
+}
+
+- (void)hidePlaylistView {
+    BOOL _isPlaylistShown = (self.playlistView.left < self.width);
+    if (_isPlaylistShown) {
+        [UIView animateWithDuration:0.2 animations:^{
+            self.playlistView.alpha = 0;
+            self.playlistView.left = self.width;
+        } completion:^(BOOL finished) {
+            self.playlistView.alpha = 1;
+            self.playlistView.hidden = YES;
+        }];
+    }
+}
+
+- (void)showPlaylistView {
+    BOOL _isPlaylistShown = (self.playlistView.left < self.width);
+    if (!_isPlaylistShown) {
+        self.playlistView.alpha = 0;
+        self.playlistView.hidden = NO;
+        [UIView animateWithDuration:0.2 animations:^{
+            self.playlistView.alpha = 1;
+            self.playlistView.left = self.width-self.playlistView.width;
+        }];
+    }
+}
+
 #pragma mark - WSMVVideoPlayerViewObserverDelegate
 - (void)readyToPlay {
     [self addPlaybackTimeObserver];
+    [self.playerViewController.moviePlayer play];
 }
 
 - (void)videoDidPlay {
     self.poster.hidden = YES;
     [self addPlaybackTimeObserver];
     [self.controlBar setPlayBtnStatus:WSMVVideoPlayerPlayBtnStatus_Playing];
+    [self.loadingView stopAnimation];
 }
 
 - (void)videoDidPause {
     [self.controlBar setPlayBtnStatus:WSMVVideoPlayerPlayBtnStatus_Pause];
+}
+
+- (void)videDidInterrupted {
+    [self.loadingView stopAnimation];
 }
 
 - (void)videoDidStop {
@@ -195,14 +314,8 @@
 
 - (void)didTapPlaylistBtn {
     NSLogInfo(@"INFO: Tapped playlist btn...");
-    
-//    [UIView animateWithDuration:0.2 animations:^{
-//        if (self.playlistView.left < self.width) {
-//            self.playlistView.left = self.width;
-//        } else {
-//            self.playlistView.left = self.width-self.playlistView.width;
-//        }
-//    }];
+    BOOL _isPlaylistShown = (self.playlistView.left < self.width);
+    if (_isPlaylistShown) [self hidePlaylistView]; else [self showPlaylistView];
 }
 
 #pragma mark - WSMVProgressSliderDelegate

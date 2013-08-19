@@ -24,6 +24,7 @@
 - (void)videoDidPlay;
 - (void)videoDidPause;
 - (void)videoDidStop;
+- (void)videDidInterrupted;
 - (void)videoDidFinish;
 
 - (void)playbackTimeDidChanged;

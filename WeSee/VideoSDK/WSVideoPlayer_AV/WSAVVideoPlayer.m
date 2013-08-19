@@ -38,11 +38,11 @@ static void *SNPlayerViewPlayerRateObservationContext = &SNPlayerViewPlayerRateO
 @interface WSAVVideoPlayer()
 @property(nonatomic, retain)WSLoadingView           *loadingView;
 @property(nonatomic, retain)AVQueuePlayer           *player;
-@property(nonatomic, retain)WSAVVideoPlayerMsgBox     *msgBox;
+@property(nonatomic, retain)WSAVVideoPlayerMsgBox   *msgBox;
 @property(nonatomic, retain)UIImageView             *poster;
-@property(nonatomic, retain)WSAVVideoPlayerToolBar    *toolBar;
+@property(nonatomic, retain)WSAVVideoPlayerToolBar  *toolBar;
 @property(nonatomic, assign)BOOL                    isFinishedToShowOrHideToolBar;
-@property(nonatomic, retain)WSAVVideoPlaylistView     *playlistView;
+@property(nonatomic, retain)WSAVVideoPlaylistView   *playlistView;
 
 @property(nonatomic, retain)NSMutableArray          *assetArray;
 @property(nonatomic, retain)NSMutableArray          *playerItemArray;
