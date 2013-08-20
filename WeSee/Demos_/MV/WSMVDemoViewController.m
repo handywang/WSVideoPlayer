@@ -30,7 +30,7 @@
     [self.view setBackgroundColor:[UIColor clearColor]];
     
     NSString *_playlistJSON = @"[\
-    {\"name\":\"MP3\", \"source\":\"http://nj.baidupcs.com/file/37050501dfb9a1778e3277a480248416?xcode=3f6893adf491953792290b87d65f04bb3372e38b42946605&fid=1963245933-250528-3102797599&time=1376896497&sign=FDTAXER-DCb740ccc5511e5e8fedcff06b081203-UPumqGbZt45cqI5Cvcncw8l4mzk%3D&to=nb&fm=N,B,U&expires=8h&rt=pr&r=285551615&logid=1821045146&fn=%E4%B8%8B%E9%9B%A8%E6%97%B6%E4%BD%A0%E5%9C%A8%E5%93%AA%E9%87%8C.mp3\"}\
+    {\"name\":\"MP4\", \"source\":\"http://cache.k.sohu.com/img8/wb/audio/2013/07/10/1373434125968.mp3\"},\
     {\"name\":\"MP4\", \"source\":\"http://data.vod.itc.cn/?new=/190/139/Sw0NUHpzEQLrAisgiAUXn4.mp4&ch=tv&cateCode=115101;115102;115103;115104&plat=null\"},\
     {\"name\":\"CCTV1综合\", \"source\":\"http://live.gslb.letv.com/gslb?stream_id=cctv1&tag=live&ext=m3u8&sign=live_ipad\"},\
     {\"name\":\"CCTV2财经\", \"source\":\"http://live.gslb.letv.com/gslb?stream_id=cctv2&tag=live&ext=m3u8&sign=live_ipad\"},\

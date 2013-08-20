@@ -293,6 +293,8 @@
     [self removePlaybackTimeObserver];
     self.playerViewController.moviePlayer.currentPlaybackTime = 0;
     [self.controlBar.progressBar resetTimeLabel];
+    
+    [self.loadingView stopAnimation];
 }
 
 - (void)playbackTimeDidChanged {
