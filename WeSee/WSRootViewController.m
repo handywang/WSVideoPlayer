@@ -18,9 +18,10 @@
 - (id)init {
     self = [super init];
     if (self) {
-        self.title = @"Demos";
         WSRootTableViewController *_tableVC = [[[WSRootTableViewController alloc] initWithStyle:UITableViewStylePlain] autorelease];
         [self pushViewController:_tableVC animated:NO];
+        
+        _tableVC.title = @"Demos";
     }
     return self;
 }
